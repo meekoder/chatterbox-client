@@ -11,10 +11,11 @@ var FormView = {
     event.preventDefault();
     // temporarily pass in object to save to server
     Parse.create({
-      username: 'meeko',
-      text: 'owo',
+      username: App.username,
+      text: $('#message').val(),
       roomname: 'meekoder'
     });
+    $('#message').val('');
     console.log('click!');
   },
 
