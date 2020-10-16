@@ -9,7 +9,12 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
+    // temporarily pass in object to save to server
+    Parse.create({
+      username: 'meeko',
+      text: 'owo',
+      roomname: 'meekoder'
+    });
     console.log('click!');
   },
 
