@@ -18,11 +18,10 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
-    Parse.readAll((data) => {
+    Parse.readAll(({results}) => {
       // examine the response from the server request:
-      console.log(data);
-
-      callback();
+      console.log(results);
+      callback(results);
     });
   },
 
