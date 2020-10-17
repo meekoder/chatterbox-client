@@ -5,13 +5,17 @@ var RoomsView = {
 
   initialize: function() {
     RoomsView.$button.on('click', Rooms.add);
+    RoomsView.render();
   },
 
   render: function() {
+    for (var i = 0; i < Rooms.rooms.length; i++) {
+      RoomsView.renderRoom(Rooms.rooms[i]);
+    }
   },
 
   renderRoom: function (room) {
-    $(`<option><%- room %></option>`).appendTo(this.$select);
+    $(`<option></option>`).html(room).appendTo(this.$select);
   }
 
 };
