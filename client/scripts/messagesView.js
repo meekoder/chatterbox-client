@@ -3,6 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
+    MessagesView.$chats.on('click', Friends.toggleStatus);
     App.fetch((results) => {
       this.render(results);
     });
