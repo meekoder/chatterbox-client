@@ -9,14 +9,12 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    // temporarily pass in object to save to server
+    $('#message').val('');
     Parse.create({
       username: App.username,
       text: $('#message').val(),
-      roomname: 'meekoder'
+      roomname: 'test'
     });
-    $('#message').val('');
-    console.log('click!');
   },
 
   setStatus: function(active) {
