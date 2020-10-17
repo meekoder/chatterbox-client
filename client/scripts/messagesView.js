@@ -17,7 +17,7 @@ var MessagesView = {
   renderMessage: function(message) {
     if (!message.username) {
       return;
-    };
+    }
     // render new message
     var newMessage = MessageView.render(message);
     // append new message to body
